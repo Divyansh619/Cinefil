@@ -15,6 +15,8 @@ const Detail = () => {
   
 
   const detailapi = async () => {
+
+ 
     setLoading(true);
     try {
       const response = await fetch(

@@ -39,9 +39,9 @@ const Description = ({ descriptionData }) => {
   }, []);
 
   return (
-    <div className="bg-white rounded-lg p-6 shadow-md">
-      <p className="text-lg mb-4">{descriptionData.overview}</p>
-      <div className="mb-2">
+    <div className="bg-gray-800 rounded-xl p-6 shadow-md">
+      <p className="text-lg text-white    border-b border-gray-100  mb-4">{descriptionData.overview}</p>
+      <div className="text-lg mb-2 text-white">
         Director:
         <div className="mt-2 space-y-2 ">
           {creditData.crew?.slice(0, 5).map((actor) => (
@@ -52,7 +52,7 @@ const Description = ({ descriptionData }) => {
         </div>
       </div>
       
-      <div>
+      <div className="text-lg text-white">
         Stars:
         <div className="mt-2 flex flex-wrap -mx-4">
           {creditData.cast?.slice(0, 8).map((actor) => (
@@ -69,8 +69,8 @@ const Description = ({ descriptionData }) => {
                   className="rounded-md"
                 />
                 <div>
-                  <div className="text-lg font-semibold">{actor.name}</div>
-                  <div className="text-gray-600">
+                  <div className="text-lg text-black font-semibold">{actor.name}</div>
+                  <div className="text-gray-600 text-sm">
                     Character: {actor.character}
                   </div>
                 </div>
