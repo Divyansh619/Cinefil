@@ -1,6 +1,4 @@
 import Banner from "@/Components/Banner";
-import Footer from "@/Components/Footer";
-import Navbar from "@/Components/Navbar";
 import SearchTab from "@/Components/SearchTab";
 import SlickCarousel from "@/Components/SlickCarousel";
 import React from "react";
@@ -155,18 +153,23 @@ oneMonthAgo.setMonth(today.getMonth() + 1);
 
 
 
-console.log("Today's Date:", today.toISOString().substring(0, 10)); // Format as YYYY-MM-DD
-console.log("One Month Ago:", oneMonthAgo.toISOString().substring(0, 10)); // Format as YYYY-MM-DD
+  const images = [
+    {img:'https://ares.shiftdelete.net/2023/06/marvels-spiderman-2-fiyati-cikis-tarihi-1.webp'},
+   { img:'https://justfunfacts.com/wp-content/uploads/2022/03/spider-man-1.jpg',}
+     
+     
+  ];
 
 
 
   return (
     <div>
-      <Navbar/>
+      
       {/* #Banner */}
+      <Banner images={images} />
       <div className="w-[95%] mx-auto">
       <SearchTab/>
-      {/* <Banner/> */}
+   
 
      
         <SlickCarousel carouselData={nowPlayingData} heading={"Now Playing"} />
@@ -176,8 +179,7 @@ console.log("One Month Ago:", oneMonthAgo.toISOString().substring(0, 10)); // Fo
 
         <SlickCarousel carouselData={upcoming} heading={"UpComing"} />
       </div>
-      {/* #Footer */}
-      <Footer />
+     
     </div>
   );
 };
